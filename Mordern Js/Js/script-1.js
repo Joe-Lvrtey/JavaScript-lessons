@@ -99,7 +99,7 @@ const fruits = ["orange", "bannana", "apple"];
 const vegetables = ["lettuce", "carbage", "carrot"];
 
 // fruits.push(vegetables)
-x = fruits.concat(vegetables);
+x = fruits.concat(vegetables); // returns a new array that is the combination of the two arrays, does not modify the original arrays
 
 console.log(x);
 
@@ -118,11 +118,11 @@ const arrr = [1, [3, 4], 5, 7, 5, 8, [6, 2]];
 console.log(arrr);
 console.log("This is the flatten arrayed", arrr.flat());
 
-const n = Array.isArray(arr);
+const n = Array.isArray(arr); //checks if a given data type is an array, returns true if it is an array and false if it is not an array
 
 console.log(n);
 
-console.log(Array.isArray("hello"));
+console.log(Array.isArray("hello")); // returns false because "hello" is not an array
 
 const a = 1;
 const b = 2;

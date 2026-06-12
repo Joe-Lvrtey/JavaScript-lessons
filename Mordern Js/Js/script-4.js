@@ -18,8 +18,8 @@ if (true) {
   var c = 5;
 }
 
-// console.log(a); // error -- a not defined
-// console.log(b); // error -- b not defined
+// console.log(a); // error -- a reference error, a is not defined, it is block scoped
+// console.log(b); // error -- b reference error, b is not defined, it is block scoped
 // console.log(c); // 5, cos var is not block scope , it also works in loops, but this doesnt work in functions.
 
 // nested scope

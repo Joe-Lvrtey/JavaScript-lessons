@@ -132,10 +132,10 @@ const d = 4;
 console.log(`this is the way array.of works ${Array.of(a, b, c, d)}`);
 
 const array = [1, 2, 3, 4, 5];
-array.unshift(0);
-array.push(6);
+array.unshift(0); // prepends 0 to the beginning of the array
+array.push(6); // appends 6 to the end of the array
 y = array.reverse();
-console.log(y);
+console.log(`The reversed array is: ${y}`);
 
 const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [5, 6, 7, 8, 9, 10];
@@ -149,7 +149,7 @@ console.log(arr3, sum);
 const obj1 = { vegetables: 1, fruits: 2, drinks: 4 };
 
 let literals = obj1.fruits;
-console.log(literals);
+console.log(literals); // logs 2 to the console, accessing the value of the "fruits" property in the obj1 object using dot notation and storing it in the literals variable.
 
 console.log(obj1);
 
@@ -190,7 +190,7 @@ const todos = [
   { cars: 1, girls: 7, sex: "female" },
 ];
 let allKeys = todos[0];
-console.log(Object.values(todos[0]));
+console.log(Object.values(todos[0])); 
 
 // destructuring
 

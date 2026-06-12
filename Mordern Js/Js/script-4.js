@@ -24,12 +24,12 @@ if (true) {
 
 // nested scope
 function parent() {
-  const x = 100;
+  const x = 100; // x is a closure variable, it can be accessed by the child function, but not the other way round
 
   // but y cant be accessed here
   function child() {
     const y = 200;
-    console.log(`accessing x fro here ${x + y}`);
+    console.log(`accessing x from here ${x + y}`);
     // x can be accessed here, child can use parent variables
   }
 
@@ -52,7 +52,7 @@ const addPlusSign = function (value) {
 
 console.log(addPlusSign("Flacko"));
 
-const minus = (a, b) => a - b; // implicit return
+const minus = (a, b) => a - b; // implicit return, immediate return, no need for return keyword, this is an arrow function
 console.log(minus(3, 4));
 
 const double = (a) => a ** 2;

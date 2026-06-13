@@ -155,3 +155,34 @@ console.log(foundIndex); // findIndex returns the index of the first element tha
 // some
 const hasEven = numbers.some((num) => num % 2 === 0);
 console.log(hasEven); // array.some returns a boolean value, it returns true if at least one element in the array satisfies the condition, otherwise it returns false
+
+// from
+const str = "Hello";
+const strArray = Array.from(str);
+console.log(strArray); // Array.from creates a new array from an array-like or iterable object, it takes a callback function as an optional second argument, the callback function takes three parameters, the current element, the index of the current element and the array itself
+
+// Object Literals
+
+const name = "Flacko";
+const age = 23;
+
+const user = {
+  name: name,
+  age: age,
+};
+
+console.log(user);
+
+// with object literals, if the key and value have the same name, we can just write the key once
+
+const user2 = {
+  name,
+  age,
+};
+
+console.log(user2);
+
+// block scope vs function scope
+
+// var is function scoped, it can be accessed anywhere in the function but not outside the function, it is global to the function scope
+// let and const are block scoped, they can be accessed only within the block they are declared in, they are not global to the function scope

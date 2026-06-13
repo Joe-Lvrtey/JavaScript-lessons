@@ -127,3 +127,31 @@ for (let index = 1; index <= 100; index++) {
     console.log(index, i);
   }
 }
+
+// array methods needed for React
+// map, filter, reduce, find, findIndex, some, every
+
+const numbers = [1, 2, 3, 4, 5];
+
+// map
+const squaredNumbers = numbers.map((num) => num ** 2);
+console.log(squaredNumbers); // returns a new array with the result of the callback function for each element in the array, it does not modify the original array, it takes a callback function as an argument, the callback function takes three parameters, the current element, the index of the current element and the array itself
+
+// filter
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+console.log(evenNumbers); // returns a new array with the elements that satisfy the condition in the callback function, it does not modify the original array, it takes a callback function as an argument, the callback function takes three parameters, the current element, the index of the current element and the array itself
+
+// reduce
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // array.reduce is used basically for summing arrays and can be used on objects in array too, takes a callback function and an initial value, the callback function takes two parameters, the accumulator and the current value, the accumulator is the value that is returned from the previous iteration, the current value is the current element in the array, the initial value is the value that is used as the first argument in the first iteration, if no initial value is provided, the first element of the array is used as the initial value and the iteration starts from the second element
+
+// find
+const foundNumber = numbers.find((num) => num > 3);
+console.log(foundNumber); // find returns the first element that satisfies the condition, if no element satisfies the condition it returns undefined
+
+const foundIndex = numbers.findIndex((num) => num > 3);
+console.log(foundIndex); // findIndex returns the index of the first element that satisfies the condition, if no element satisfies the condition it returns -1
+
+// some
+const hasEven = numbers.some((num) => num % 2 === 0);
+console.log(hasEven); // array.some returns a boolean value, it returns true if at least one element in the array satisfies the condition, otherwise it returns false

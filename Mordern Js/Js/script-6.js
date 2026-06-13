@@ -89,15 +89,15 @@ if (Object.keys(user1).length !== 0) {
 // && true for all
 // || true for one -- either
 
-// && returns the fisrt falsey value or the last value
+// && returns the first falsey value or the last value
 
 let a;
 
 a = 1 && 0 && 2;
 
-console.log(a);
+console.log(a); // && returns the first falsy value or the last value, in this case 0 is the first falsy value so it is returned, if all values were truthy then the last value would have been returned
 
-// || returns the fisrt truthy value or the last false
+// || returns the first truthy value or the last false
 
 let b;
 
@@ -105,7 +105,7 @@ b = 1 || 2 || 0;
 
 console.log(b);
 
-// ?? returns the right side operator when the left side is null or undefined
+// ?? returns the right side operator when the left side is null or undefined -- nullish coalescing operator
 
 let c;
 

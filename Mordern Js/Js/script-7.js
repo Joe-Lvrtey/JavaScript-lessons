@@ -42,7 +42,7 @@ for (let index = 1; index <= 100; index++) {
 }
 
 
-// for in loop
+// for of loop
 
 const items = ['VsCode', 'Chrome', 'Git', 'Github']
 
@@ -143,7 +143,7 @@ console.log(compYears);
 // array.reduce used basically for summing arrays and can be used on objects in array too
 const numbers = [1,2,3,4,5,6,7]
 
-// prev number starts at 1 since there is no number before, 1 will bw addded to 2 and the loop will continue
+// prev number starts at 1 since there is no number before, 1 will be addded to 2 and the loop will continue
 
 // initial values can be given to be used as starting points too
 

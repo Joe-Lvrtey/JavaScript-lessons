@@ -90,3 +90,27 @@ function hoisting() {
   let output = "demonstrating how hoisting works";
   return output;
 }
+
+// closures
+
+function outer() {
+  let count = 0; // this variable is in the outer function scope and will be accessible to the inner function here because of closure, this is a private variable and cannot be accessed from outside the function
+
+  function inner() {
+    count++;
+    return count;
+  }
+
+  return inner;
+}
+
+const counter = outer();
+
+// arrow functions
+
+const arrowFunction = (param1, param2) => {
+  // this is an arrow function, it is a shorter syntax for writing functions, it does not have its own this, arguments, super, or new.target keywords, it cannot be used as a constructor, and it cannot be used with the new keyword
+  return param1 + param2;
+};
+
+console.log(arrowFunction(2, 3));

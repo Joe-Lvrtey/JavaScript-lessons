@@ -106,10 +106,35 @@ function outer() {
 
 const counter = outer();
 
-// arrow functions
+// function statements
+function statement() {
+  console.log("this is a function statement");
+}
 
+statement();
+
+// function expressions
+
+const expression = function () {
+  console.log("this is a function expression");
+};
+
+expression();
+
+/* 
+The difference between function statements and function expressions is that function statements are hoisted and can be called before they are defined, while function expressions are not hoisted and cannot be called before they are defined.
+Function statements are also known as function declarations, while function expressions are also known as anonymous functions or lambda functions.
+Function expressions can be named or anonymous, while function statements must have a name. Function expressions can be assigned to variables, passed as arguments to other functions, and returned from other functions, while function statements cannot be assigned to variables, passed as arguments to other functions, or returned from other functions.
+*/
+
+/* First class functions are functions that can be treated like any other variable, they can be assigned to variables, passed as arguments to other functions, and returned from other functions. 
+They can also be stored in data structures like arrays and objects. In JavaScript, functions are first class citizens, which means that they can be treated like any other value.
+ */
+
+// arrow functions
 const arrowFunction = (param1, param2) => {
   // this is an arrow function, it is a shorter syntax for writing functions, it does not have its own this, arguments, super, or new.target keywords, it cannot be used as a constructor, and it cannot be used with the new keyword
+  // they use this from their surrounding function execution context
   return param1 + param2;
 };
 

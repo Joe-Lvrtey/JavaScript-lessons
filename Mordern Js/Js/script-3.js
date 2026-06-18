@@ -139,3 +139,20 @@ const arrowFunction = (param1, param2) => {
 };
 
 console.log(arrowFunction(2, 3));
+
+// higher order functions are functions that take other functions as arguments or return functions as their result. They can be used to create more abstract and reusable code, and they are a key feature of functional programming. In JavaScript, higher order functions are commonly used with array methods like map, filter, and reduce, as well as with event listeners and callbacks.
+
+/* 
+Array.prototype --> the prototype object for all JavaScript arrays.
+It contains the shared methods and properties that every array inherits.
+
+You can create or add a custom prototype
+*/
+// adding a custom method to the Array prototype
+Array.prototype.first = function () {
+  return this[0];
+};
+
+const nums = [10, 20, 30];
+
+console.log(nums.first()); // 10
